@@ -1,0 +1,120 @@
+
+
+
+@keyframes myAnim {
+  from{
+    opacity: 0.8;
+    transform:translateX(calc(var(--animation-size)*-1)) rotateY(-90deg) scaleX(0.75) rotateX(var(--angle)) ;
+  }
+  25%{
+    opacity: 1;
+    transform:  rotateY(0deg) rotateX(var(--angle));
+  }
+  50%{    
+    opacity: 0.8;
+    transform:translateX(var(--animation-size))  rotateY(90deg) scaleX(0.75) rotateX(var(--angle));
+  }
+  75% {
+    opacity: 0.3;
+    transform: rotateY(180deg) scaleX(0.50) rotateX(var(--angle));
+  }
+  to{ 
+    opacity:0.8;
+    transform:translateX(calc(var(--animation-size)*-1)) rotateY(270deg) scaleX(0.75) rotateX(var(--angle));
+  }
+}
+
+
+
+
+.worldAnimation{
+  font-size: medium;
+  width: 100px;
+  font-weight: bolder;
+  height: 40px;
+  background:transparent;
+  color:rgb(255, 255, 255);
+  position: absolute;
+  left: 400px;
+  text-align: center;
+  animation-name: myAnim;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  --animation-size: 150px;
+  --animTime: 3s;
+  --animLap: 0s;
+  --angle: 0deg;
+  transform-style: preserve-3d;
+  animation-duration: var(--animTime);
+  animation-delay: calc(var(--animTime) * var(--animLap));
+}
+
+
+
+
+.worldAnimation:nth-of-type(5n-4){
+  height: 30px;
+  font-size: small;
+  --animTime: 3s;
+  --animation-size: 60px;
+  --angle: 30deg;
+  top: 50px;
+}
+.worldAnimation:nth-of-type(5n-3){
+  height: 40px;
+  font-size:medium;
+  --animation-size: 100px;
+  --animTime: 4.2s;
+  --angle: 20deg;
+  top: 80px;
+}
+.worldAnimation:nth-of-type(5n-2){
+  height: 60px;
+  font-size:x-large;
+  --animation-size: 120px;
+  --animTime: 5.5s;
+  top: 120px;
+}
+.worldAnimation:nth-of-type(5n-1){
+  height: 40px;
+  font-size: medium;
+  --animation-size: 100px;
+  --animTime: 3.9s;
+  --angle: -20deg;
+  top: 160px;
+}
+.worldAnimation:nth-of-type(5n){
+  height: 30px;
+  font-size: small;
+  --animation-size: 60px;
+  --animTime: 3.2s;
+  --angle: -30deg;
+  top: 190px;
+}
+
+.worldAnimation:nth-of-type(n+6){
+  --animLap: 0.5;
+}
+
+
+.worldAnimationCenter{
+  font-size: medium;
+  width: 100px;
+  font-weight: bolder;
+  height: 40px;
+  background:transparent;
+  color:midnightblue;
+  position: absolute;
+  left: 400px;
+  text-align: center;
+  animation: none;
+  height: 60px;
+  font-size: large;
+  top: 110px;
+  color:whitesmoke;
+  text-shadow: 0.5px 0.5px black;
+  visibility: hidden;
+}
+
+
+
