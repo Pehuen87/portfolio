@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import WorldOfWords from './components/WorldOfWords';
 import reportWebVitals from './reportWebVitals';
+import { Moon } from './components/Moon';
+import Grid from './components/Grid';
+import StructureGrid from './components/StructureGrid';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <StructureGrid />
 );
 
 // If you want to start measuring performance in your app, pass a function
