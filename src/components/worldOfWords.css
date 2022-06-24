@@ -28,7 +28,9 @@
 
 
 .worldAnimation{
+  opacity: 0;
   font-size: medium;
+  font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 100px;
   font-weight: bolder;
   height: 40px;
@@ -93,7 +95,11 @@
 }
 
 .worldAnimation:nth-of-type(n+6){
-  --animLap: 0.5;
+  --animLap: 0.33;
+}
+
+.worldAnimation:nth-of-type(n+11){
+  --animLap: 0.66;
 }
 
 
