@@ -4,12 +4,11 @@ import './index.css';
 import WorldOfWords from './components/WorldOfWords';
 import reportWebVitals from './reportWebVitals';
 import { Moon } from './components/Moon';
-import Grid from './components/Grid';
-import StructureGrid from './components/StructureGrid';
+import { AppRouter } from './components/AppRouter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <StructureGrid />
+    <AppRouter />
 );
 
 // If you want to start measuring performance in your app, pass a function

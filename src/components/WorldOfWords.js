@@ -2,19 +2,27 @@ import './worldOfWords.css'
 
 export const WorldOfWords = () => {
   return (
-    <>
+    <div className='world'>
       <span className='worldAnimationCenter'>Pehuén Assalone</span>
-      <div className='worldAnimation'>CSS</div>
-      <div className='worldAnimation'>React</div>
-      <div className='worldAnimation'>JavaScript</div>
-      <div className='worldAnimation'>HTML</div>
-      <div className='worldAnimation'>C#</div>
-      <div className='worldAnimation'>SASS</div>
-      <div className='worldAnimation'>Mongo DB</div>
-      <div className='worldAnimation'>TypeScript</div>
-      <div className='worldAnimation'>C</div>
-      <div className='worldAnimation'>SQL</div>
-    </>
+     
+      <div>CSS</div>
+      <div>React</div>
+      <div>JavaScript</div>
+      <div>HTML</div>
+      <div>C#</div> 
+
+      <div>SASS</div>
+      <div>Mongo DB</div>
+      <div>TypeScript</div>
+      <div>SQL</div>
+      <div>C</div>
+
+      <div>LESS</div>
+      <div>Node.Js</div>
+      <div>BootStrap</div>
+      <div>Git</div>
+      <div>.Net</div>
+    </div>
   )
 }
 
