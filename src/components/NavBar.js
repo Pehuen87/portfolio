@@ -5,24 +5,43 @@ import {
 
 
 export const NavBar = () => {
+
+    let activeClassName = 'nlActive';
+    let inactiveClassName = 'navlink';
+
+
+
     return (
         <>
             <input className="ch_hamb" type="checkbox" id="side-menu" />
-            <div className='itemResp'><NavLink to="./my-work">My Work</NavLink></div>
-            <div className='itemResp'><NavLink to="./my-skills">My Skills</NavLink></div>
-
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? activeClassName : inactiveClassName}
+                to="./my-work">
+                My Work
+            </NavLink>
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? activeClassName : inactiveClassName}
+                to="./my-skills">My Skills</NavLink>
             <div className='logoNavBar'>
                 <label className="hamb" for="side-menu">
                     <pre className="symbol"> </pre>
                 </label>
                 <div className="logo">
-                    <span className="logoBorder" data-text="<PEHUEN&nbsp;ASSALONE&nbsp;&#47;&#62;">&#60;PEHUEN&nbsp;ASSALONE&nbsp;&#47;&#62;</span>
-                    {/* <span data-text="ASSALONE" className="itemResp"> ASSALONE</span> */}
+                    <NavLink to='./' className="logoBorder" data-text="<PEHUEN&nbsp;ASSALONE&nbsp;&#47;&#62;">&#60;PEHUEN&nbsp;ASSALONE&nbsp;&#47;&#62;</NavLink>
+
                 </div>
             </div>
 
-            <div className='itemResp'><NavLink to="./about">About Me</NavLink></div>
-            <div className='itemResp'><NavLink to="./contact">Contact</NavLink></div>
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? activeClassName : inactiveClassName}
+                to="./about">About Me</NavLink>
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? activeClassName : inactiveClassName}
+                to="./contact">Contact</NavLink>
         </>
     )
 }
