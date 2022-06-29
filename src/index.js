@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import WorldOfWords from './components/WorldOfWords';
 import reportWebVitals from './reportWebVitals';
-import { Moon } from './components/Moon';
 import { AppRouter } from './components/AppRouter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
