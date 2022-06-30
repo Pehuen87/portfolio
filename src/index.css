@@ -1,22 +1,23 @@
-/* :root {
+:root {
   --violet: rgb(20, 11, 18);
   --whiteNav: rgb(236, 240, 255);
   --hoverNav: #ffcb3d;
-  --navbar:  rgb(27, 10, 24);
+  --navbar: rgb(27, 10, 24, 0.98);
   --strongViolet: rgba(57, 0, 71, 0.5);
-} */
+}
 
-:root {
+/* :root {
   --violet: rgb(20, 11, 17);
   --whiteNav: rgb(255, 241, 236);
   --hoverNav: #1ac483;
-  --navbar:  rgb(17, 10, 27);
+  --navbar:  rgba(36, 22, 56, 0.9);
   --strongViolet: rgba(0, 17, 71, 0.5);
-}
+} */
 
 
 
 body {
+  background-image: url('components/img/n.svg');
   background-color: var(--violet);
   margin: 0;
   font-family: 'Rift', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -46,11 +47,11 @@ body {
   align-items: baseline;
   justify-content: space-evenly;
   font-family: 'Work Sans', sans-serif;
-  border-bottom: 2px solid var(--hoverNav);
-  box-shadow: 2px 2px 10px 1px var(--strongViolet);
-  
+  border: 2px solid var(--hoverNav);
+  border-radius: 10px;
+  margin: 5px;
   font-size: 1.4em;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 
@@ -106,12 +107,12 @@ body {
 
 
 
-.nlActive{
+.nlActive {
   color: var(--hoverNav);
   text-transform: uppercase;
   text-decoration: none;
-  cursor:default;
-  
+  cursor: default;
+
   display: inline-block;
   padding: 5px 0;
   position: relative;
@@ -125,19 +126,20 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transform: translateY(.1em);
+  transform: translateY(.2em);
 }
 
 
 .logoBorder {
   color: var(--whiteNav);
-  
+
   text-decoration: none;
 }
 
-.hamb,.ch_hamb {
+.hamb,
+.ch_hamb {
   display: none;
-} 
+}
 
 @media screen and (max-width: 900px) {
 
@@ -147,9 +149,10 @@ body {
     flex-direction: column;
     justify-content: flex-start;
   }
-  
 
-  .navlink, .nlActive {
+
+  .navlink,
+  .nlActive {
     padding-left: 1em;
     /* margin-left: 10px; */
     margin-bottom: 1em;
@@ -159,8 +162,8 @@ body {
     display: initial;
   }
 
-  .logo span {
-    font-size: smaller;
+  .logoBorder {
+    font-size: 1em;
   }
 
   .logoNavBar {
@@ -188,12 +191,13 @@ body {
     border: 2px solid var(--whiteNav);
   }
 
-  .symbol:hover::after{
+  .symbol:hover::after {
     color: var(--hoverNav);
     border: 2px solid var(--hoverNav);
   }
 
-  input[type=checkbox]:checked~.navlink,   input[type=checkbox]:checked~.nlActive {
+  input[type=checkbox]:checked~.navlink,
+  input[type=checkbox]:checked~.nlActive {
     display: none;
   }
 
@@ -203,19 +207,23 @@ body {
     padding: 4px;
   }
 
-  .logoBorder::before{
+  input[type=checkbox]:checked~.logoNavBar {
+    border-bottom: none;
+  }
+
+  .logoBorder::before {
     display: none;
   }
 }
 
-.logoBorder::before{
+.logoBorder::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 105%;
-  color: var(--navbar);  
+  color: var(--navbar);
   text-shadow: 1px 1px var(--hoverNav), -1px -1px var(--hoverNav), -1px 1px var(--hoverNav), 1px -1px var(--hoverNav);
   border-right: 2px solid var(--hoverNav);
   overflow: hidden;
@@ -224,33 +232,41 @@ body {
 
 
 @keyframes animLogo {
-  0%,10%,100% {
+
+  0%,
+  10%,
+  100% {
     width: 0;
   }
-  70%,80% {
+
+  70%,
+  80% {
     width: 100%;
   }
 }
 
 @keyframes animLogoHover {
-  0%,100% {
+
+  0%,
+  100% {
     border-right: none;
   }
+
   50% {
     border-right: 2px solid var(--hoverNav);
   }
-  
+
 }
 
 
-.logoBorder:hover::before{
+.logoBorder:hover::before {
   animation: animLogoHover 1.5s steps(1) infinite;
 }
 
 
 
 
-.slider{
+.slider {
   grid-area: contain;
   height: calc(100vh - 100px);
   width: 100vw;
@@ -258,44 +274,52 @@ body {
   flex-direction: column;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  
+
 }
 
-.disableScrollbar::-webkit-scrollbar{
+.disableScrollbar::-webkit-scrollbar {
   background: transparent;
   width: 0px;
 }
-.disableScrollbar{
+
+.disableScrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   background: transparent;
   width: 0px;
 }
 
 
-img{  /*img del slider, TODO*/
+img {
+  /*img del slider, TODO*/
   scroll-snap-align: center;
-  height:  calc(100vh - 100px);
+  height: calc(100vh - 100px);
   object-fit: cover;
 }
 
 
-.pageContainer{
-  width: 100%;
+.pageContainer {
+  justify-self: center;
+  align-self: center;
+  width: 90%;
   height: 100%;
-  /* background-color: rgba(51, 7, 92,0.5);todo cambiar el fondo de color */
+  background-color: var(--navbar);
+  /*todo cambiar el fondo de color */
+  border-radius: 15px;
+  border: 2px solid var(--hoverNav);
 }
 
 
 
-.moon1{/*todo*/
-    
-  position:absolute;
+.moon1 {
+  /*todo*/
+
+  position: absolute;
   height: 400px;
-  width: 400px;  
+  width: 400px;
   top: -5em;
   right: -5em;
   margin: auto;

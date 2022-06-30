@@ -17,9 +17,6 @@ import { MyWork } from './MyWork'
 import { About } from './About'
 
 
-/* todo */
-import moonSvg from './img/moon.svg'
-
 
 
 
@@ -46,7 +43,6 @@ export const AppRouter = () => {
                             <Route path='/about' element={<About />} />
                             <Route path='/*' element={<h1>Error 404</h1>} />
                         </Routes>
-                        <img src= {moonSvg} className='moon1' alt=''/>
                     </div>
                 </section>
             </div>
