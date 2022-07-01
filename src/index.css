@@ -156,6 +156,7 @@ body {
     padding-left: 1em;
     /* margin-left: 10px; */
     margin-bottom: 1em;
+    padding-top: 0.5em;
   }
 
   .hamb {
@@ -174,8 +175,8 @@ body {
     grid-template-rows: 1fr;
     overflow-y: hidden;
     justify-content: center;
-    align-items: baseline;
-    font-size: 0.8em;
+    align-items:center;
+    font-size: 0.5em;
     order: -1;
     border-bottom: 2px solid var(--hoverNav);
   }
@@ -293,13 +294,6 @@ html::-webkit-scrollbar {
 }
 
 
-img {
-  /*img del slider, TODO*/
-  scroll-snap-align: center;
-  height: calc(100vh - 100px);
-  object-fit: cover;
-}
-
 
 .pageContainer {
   justify-self: center;
@@ -307,23 +301,7 @@ img {
   width: 90%;
   height: 100%;
   background-color: var(--navbar);
-  /*todo cambiar el fondo de color */
   border-radius: 15px;
   border: 2px solid var(--hoverNav);
 }
 
-
-
-.moon1 {
-  /*todo*/
-
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  top: -5em;
-  right: -5em;
-  margin: auto;
-  border-radius: 100%;
-  z-index: -10;
-  /* box-shadow: 0.3px 0.3px darkblue, 0px 0px 50px rgb(142, 110, 228), 0px 0px 25px whitesmoke; */
-}
