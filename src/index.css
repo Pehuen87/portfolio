@@ -223,10 +223,12 @@ html::-webkit-scrollbar {
 
 }
 .pageContainer {
+  
+  grid-area: contain;
+  height: calc(100vh - 100px);
   justify-self: center;
   align-self: center;
   width: 90%;
-  height: minmax(20% 100%);
   background-color: var(--navbar);
   border-radius: 15px;
   border: 2px solid var(--hoverNav);

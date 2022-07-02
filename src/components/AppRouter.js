@@ -4,8 +4,6 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link,
-    NavLink
 } from 'react-router-dom'
 
 
@@ -33,7 +31,6 @@ export const AppRouter = () => {
                 <div className="navBar"><NavBar /></div>
 
 
-                <section id='scroller' className='slider disableScrollbar'>{/*todo arreglar esto*/}
                     <div className='pageContainer'>
                         <Routes>
                             <Route exact path='/' element={<HomeScreen />} />
@@ -44,7 +41,6 @@ export const AppRouter = () => {
                             <Route path='/*' element={<h1>Error 404</h1>} />
                         </Routes>
                     </div>
-                </section>
             </div>
         </Router>
 
