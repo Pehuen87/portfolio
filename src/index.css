@@ -20,9 +20,6 @@ body {
   background-image: url('components/img/n.svg');
   background-color: var(--violet);
   margin: 0;
-  font-family: 'Rift', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,6 +29,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70px auto 1fr 20px;
   width: 100vw;
+  height: 95vh;
   gap: 5px;
   text-align: center;
   grid-template-areas: "header     header"
@@ -41,12 +39,13 @@ body {
 }
 
 .navBar {
+  
+  font-family: "Josefin Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: var(--navbar);
   grid-area: header;
   display: inline-flex;
   align-items: baseline;
   justify-content: space-evenly;
-  font-family: 'Work Sans', sans-serif;
   border: 2px solid var(--hoverNav);
   border-radius: 10px;
   margin: 5px;
@@ -72,7 +71,6 @@ body {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
   color: var(--whiteNav);
-  text-transform: uppercase;
 }
 
 
@@ -109,10 +107,8 @@ body {
 
 .nlActive {
   color: var(--hoverNav);
-  text-transform: uppercase;
   text-decoration: none;
   cursor: default;
-
   display: inline-block;
   padding: 5px 0;
   position: relative;
@@ -120,6 +116,10 @@ body {
 
 
 .logo {
+  
+  font-family: 'Limelight', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   color: var(--whiteNav);
   font-size: 1.5em;
   font-weight: bolder;
@@ -141,7 +141,100 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 900px) {
+
+
+.logoBorder::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 105%;
+  color: var(--navbar);
+  text-shadow: 1px 1px var(--hoverNav), -1px -1px var(--hoverNav), -1px 1px var(--hoverNav), 1px -1px var(--hoverNav);
+  border-right: 2px solid var(--hoverNav);
+  overflow: hidden;
+  animation: animLogo 8s linear infinite;
+}
+
+
+@keyframes animLogo {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  80% {
+    width: 100%;
+  }
+}
+
+@keyframes animLogoHover {
+
+  0%,
+  100% {
+    border-right: none;
+  }
+
+  50% {
+    border-right: 2px solid var(--hoverNav);
+  }
+
+
+}
+
+
+.logoBorder:hover::before {
+  animation: animLogoHover 1.5s steps(1) infinite;
+}
+
+
+
+
+.disableScrollbar::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+}
+
+.disableScrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+}
+
+
+
+
+.slider {
+  grid-area: contain;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: scroll;
+  scroll-snap-type: y mandatory; */
+
+}
+.pageContainer {
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+  height: minmax(20% 100%);
+  background-color: var(--navbar);
+  border-radius: 15px;
+  border: 2px solid var(--hoverNav);
+  box-shadow:  14px 0px 20px var(--navbar);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) { /*MEDIA QUERY*/
 
   .navBar {
     display: inline-flex;
@@ -211,97 +304,8 @@ body {
   input[type=checkbox]:checked~.logoNavBar {
     border-bottom: none;
   }
-
   .logoBorder::before {
     display: none;
   }
-}
 
-.logoBorder::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 105%;
-  color: var(--navbar);
-  text-shadow: 1px 1px var(--hoverNav), -1px -1px var(--hoverNav), -1px 1px var(--hoverNav), 1px -1px var(--hoverNav);
-  border-right: 2px solid var(--hoverNav);
-  overflow: hidden;
-  animation: animLogo 8s linear infinite;
-}
-
-
-@keyframes animLogo {
-
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-
-  70%,
-  80% {
-    width: 100%;
-  }
-}
-
-@keyframes animLogoHover {
-
-  0%,
-  100% {
-    border-right: none;
-  }
-
-  50% {
-    border-right: 2px solid var(--hoverNav);
-  }
-
-}
-
-
-.logoBorder:hover::before {
-  animation: animLogoHover 1.5s steps(1) infinite;
-}
-
-
-
-
-.slider {
-  grid-area: contain;
-  height: calc(100vh - 100px);
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-
-}
-
-.disableScrollbar::-webkit-scrollbar {
-  background: transparent;
-  width: 0px;
-}
-
-.disableScrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar {
-  background: transparent;
-  width: 0px;
-}
-
-
-
-.pageContainer {
-  justify-self: center;
-  align-self: center;
-  width: 90%;
-  height: 100%;
-  background-color: var(--navbar);
-  border-radius: 15px;
-  border: 2px solid var(--hoverNav);
-}
-
+}/* MEDIA*/

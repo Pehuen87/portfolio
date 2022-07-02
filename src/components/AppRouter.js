@@ -33,7 +33,7 @@ export const AppRouter = () => {
                 <div className="navBar"><NavBar /></div>
 
 
-                <section id='scroller' className='slider disableScrollbar'>
+                <section id='scroller' className='slider disableScrollbar'>{/*todo arreglar esto*/}
                     <div className='pageContainer'>
                         <Routes>
                             <Route exact path='/' element={<HomeScreen />} />

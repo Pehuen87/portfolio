@@ -27,9 +27,8 @@
 
 .world{
   position: relative;
-  height: 16em;
-  width: 16em;
-  border: 1px solid red;
+  height: 250px;
+  width: 250px;
 }
 
 .world>div{
@@ -40,11 +39,10 @@
   opacity: 0;
   position: absolute;
   font-size: medium;
-  width: 6.5em;
-  left: 2em;
-  top:0;
+  width: 100px;
+  left: 70px;
   font-weight: bolder;
-  height: 2em;
+  height: 40px;
   background:transparent;
   color:rgb(255, 255, 255);
   text-align: center;
@@ -68,7 +66,7 @@
 .world>:nth-of-type(5n-4){
   height: 30px;
   font-size: small;
-  --animTime: 3s;
+  --animTime: 2s;
   --animation-size: 60px;
   --angle: 30deg;
   top: 50px;
@@ -84,7 +82,7 @@
 .world>:nth-of-type(5n-2){
   height: 60px;
   font-size:x-large;
-  --animation-size: 120px;
+  --animation-size: 110px;
   --animTime: 5.5s;
   top: 120px;
 }
@@ -92,7 +90,7 @@
   height: 40px;
   font-size: medium;
   --animation-size: 100px;
-  --animTime: 3.9s;
+  --animTime: 3.5s;
   --angle: -20deg;
   top: 160px;
 }
@@ -100,13 +98,13 @@
   height: 30px;
   font-size: small;
   --animation-size: 60px;
-  --animTime: 3.2s;
+  --animTime: 2.2s;
   --angle: -30deg;
   top: 190px;
 }
 
 .world>:nth-of-type(n+6){
-  --animLap: 0.5;
+  --animLap: 0.6;
 }
 .world>:nth-of-type(n+11){
   --animLap: 1;
@@ -130,4 +128,3 @@
   text-shadow: 0.5px 0.5px black;
   visibility: hidden;
 }
-
