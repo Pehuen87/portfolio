@@ -1,3 +1,5 @@
+
+
 .page {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -10,7 +12,7 @@
     height: 100%;
     overflow-x: hidden;
     align-items: center;
-    animation: fadeInAnimation ease-in 2s;
+    animation: fadeInAnimation ease-in 0.5s; 
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -75,12 +77,27 @@
 .chart footer div {
     width: 0;
     height: 100%;
-    background-color: #08fdd8;
-    -webkit-transition: width 1.3s ease-out;
-    -o-transition: width 1.3s ease-out;
-    transition: width 1.3s ease-out;
     border-radius: 15px;
+    animation: textclip 2s linear infinite;
+    background-image: linear-gradient(
+    -225deg,
+    #08fdd8 0%,
+    #44107a 17%,
+    #ff1361 34%,
+    #fff800 50%,
+    #ff1361 67%,
+    #44107a 84%,
+    #08fdd8 100%
+  );
 }
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+
 .chart span {
     color: white;
     font-size: 18px;
@@ -91,7 +108,7 @@
 .chart footer {
     background-color: #373737;
     height: 3px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 
