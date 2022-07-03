@@ -154,11 +154,11 @@ body {
   text-shadow: 1px 1px var(--hoverNav), -1px -1px var(--hoverNav), -1px 1px var(--hoverNav), 1px -1px var(--hoverNav);
   border-right: 2px solid var(--hoverNav);
   overflow: hidden;
-  animation: animLogo 8s linear infinite;
+  animation: animLogo 1.5s steps(1) infinite;
 }
 
 
-@keyframes animLogo {
+@keyframes animLogoHover {
 
   0%,
   10%,
@@ -172,7 +172,7 @@ body {
   }
 }
 
-@keyframes animLogoHover {
+@keyframes animLogo {
 
   0%,
   100% {
@@ -188,7 +188,7 @@ body {
 
 
 .logoBorder:hover::before {
-  animation: animLogoHover 1.5s steps(1) infinite;
+  animation: animLogoHover 8s linear infinite;
 }
 
 
@@ -223,7 +223,6 @@ html::-webkit-scrollbar {
 
 }
 .pageContainer {
-  
   grid-area: contain;
   height: calc(100vh - 100px);
   justify-self: center;

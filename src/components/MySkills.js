@@ -12,53 +12,57 @@ export const MySkills = () => {
         <p>My goal as a Web Developer is to make solutions that will adapt to every user requirement, with dinamic UI and responsive design. To achive that I apply my knowledge about several technologies, such as HTML, CSS, JavaScript, SASS, LESS and React.</p>
         <p>My main interest is to work in a collaborative team that leads to a constant learning, and collective and personal improvement.</p>
       </div>
-      <div className="skillsDetails">
+      <div className="banner">
+        <div className="highBanner">
 
-        <div className="chart">
-          <span>HTML & CSS</span>
-          <footer>
-            <div data-width="95%" style={{width: '95%'}}></div>
-          </footer>
+          <div className="chart">
+            <span>HTML & CSS</span>
+            <footer>
+              <div data-width="95%" style={{ width: '95%' }}></div>
+            </footer>
+          </div>
+
+          <div className="chart">
+            <span>React</span>
+            <footer>
+              <div data-width="75%" style={{ width: '75%' }}></div>
+            </footer>
+          </div>
+
+
+          <div className="chart">
+            <span>JavaScript</span>
+            <footer>
+              <div data-width="70%" style={{ width: '70%' }}></div>
+            </footer>
+          </div>
+
+          <div className="chart">
+            <span>Bootstrap/Less/Sass</span>
+            <footer>
+              <div data-width="70%" style={{ width: '70%' }}></div>
+            </footer>
+          </div>
+
+          <div className="chart">
+            <span>SQL</span>
+            <footer>
+              <div data-width="75%" style={{ width: '75%' }}></div>
+            </footer>
+          </div>
+
+          <div className="chart">
+            <span>C#</span>
+            <footer>
+              <div data-width="75%" style={{ width: '75%' }}></div>
+            </footer>
+          </div>
+
         </div>
-
-        <div className="chart">
-          <span>React</span>
-          <footer>
-            <div data-width="75%" style={{width: '75%'}}></div>
-          </footer>
+        <div className="lowBanner">
+          <WorldOfWords />
         </div>
-
-
-        <div className="chart">
-          <span>JavaScript</span>
-          <footer>
-            <div data-width="70%" style={{width: '70%'}}></div>
-          </footer>
-        </div>
-
-        <div className="chart">
-          <span>Bootstrap/Less/Sass</span>
-          <footer>
-            <div data-width="70%" style={{width: '70%'}}></div>
-          </footer>
-        </div>
-
-        <div className="chart">
-          <span>SQL</span>
-          <footer>
-            <div data-width="75%" style={{width: '75%'}}></div>
-          </footer>
-        </div>
-
-        <div className="chart">
-          <span>C#</span>
-          <footer>
-            <div data-width="75%" style={{width: '75%'}}></div>
-          </footer>
-        </div>
-
       </div>
-      <div className="rightBanner"><WorldOfWords /></div>
     </div>
 
   )
