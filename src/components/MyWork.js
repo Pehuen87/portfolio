@@ -3,8 +3,10 @@ import "./page.css"
 
 
 export const MyWork = () => {
+  
+  (document.getElementById("side-menu") || {}).checked = true;
   return (
-    <div className="page">
+    <div className="page disableScrollbar">
       <div className="textContainer">
         <span>Hi, I'm Pehuen, a Web Developer...</span>
         <p> ...located in Buenos Aires, Argentina. I'm a curious person, always serching for experiences that allow me to learn new things.</p>

@@ -6,6 +6,9 @@ const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
 
 export const Contact = () => {
+
+  (document.getElementById("side-menu") || {}).checked = true;
+
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
     setTimeout(() => {
@@ -23,8 +26,12 @@ export const Contact = () => {
   }
 
   return (
-    <div className="page">
+    <div className="page disableScrollbar">
       <div className="textContainer">
+      <span>Contact Me</span>
+        <p>I believe in lifelong learning and continuous improvement. I'm really interested in full time jobs, hoping to connect with more lifelong learners and build the greatest team. </p>
+        <p>Whether you have a question, just want to say hi or ask for my resume, I’ll try my best to get back to you!</p>
+
         <form
           action={FORM_ENDPOINT}
           onSubmit={handleSubmit}

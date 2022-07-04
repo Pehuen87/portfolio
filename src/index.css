@@ -250,7 +250,7 @@ html::-webkit-scrollbar {
     padding-left: 1em;
     /* margin-left: 10px; */
     margin-bottom: 1em;
-    padding-top: 0.5em;
+    padding-top: 1em;
   }
 
   .hamb {
@@ -258,7 +258,7 @@ html::-webkit-scrollbar {
   }
 
   .logoBorder {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .logoNavBar {

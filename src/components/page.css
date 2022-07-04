@@ -38,6 +38,7 @@
 
 
 .textContainer {
+    width: 80%;
     display: flex;
     flex-direction: column;
     grid-area: text;
@@ -74,20 +75,22 @@
 }
 
 .chart span {
-    color: white;
+    color: whitesmoke;
     font-size: 18px;
     margin-bottom: 7px;
     display: block;
     text-align: left;
 }
 
-.chart footer, .form footer{
+.chart footer,
+.form footer {
     background-color: #373737;
-    height: 3px;
+    height: 4px;
     border-radius: 15px;
 }
 
-.chart footer div, .form footer div {
+.chart footer div,
+.form footer div {
     width: 0;
     height: 100%;
     border-radius: 15px;
@@ -104,9 +107,13 @@
 
 
 .mapouter {
-    filter: contrast(1.1) blur(0.1px) hue-rotate(25deg) brightness(0.8);
+    filter: invert() hue-rotate(227deg) contrast(1.3) brightness(0.7);
+    /* filter: contrast(1.1) blur(0.1px) hue-rotate(25deg) brightness(0.8); */
     animation: fadeInAnimation ease 2s;
 }
+
+
+
 
 .gmap_canvas {
     height: 100%;
@@ -122,53 +129,106 @@
 
 
 
-input:focus ~footer>div, textarea:focus ~footer>div{
-    animation: footerAnim ease 2s forwards ;
+input:focus~footer>div,
+textarea:focus~footer>div {
+    animation: footerAnim ease 2s forwards;
 }
 
 @keyframes footerAnim {
-    to{
+    to {
         width: 100%;
     }
 }
 
 
-.formGrid{
-    width: 90%;
-    height: 70%;
+.formGrid {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: 
-                "one two"
-                "three three"
-                "four  four"
-                "five   five"
-                "six    six";
-                
+    grid-template-rows: 1fr 1fr 4fr 1fr 2fr;
+    grid-template-areas:
+        "one two"
+        "three three"
+        "four  four"
+        "nn   nn"
+        "six five";
+
     gap: 15px;
 }
 
 
 
-.form{
+.form {
     grid-area: var(--area);
-    
+
 }
-.form>footer{
+
+.form>footer {
     width: 100%;
 }
 
-.form>*{
+.form>* {
+    font-weight: 400;
     text-indent: 5px;
     border: none;
     color: white;
-    background-color: rgba(71, 35, 170, 0.4);
+    /* background-color: #eb9034a2; */
+    background-color: rgba(10, 0, 10, 0.3);
     width: calc(100% - 4px);
     height: 100%;
     border-radius: 3px;
-    border: 0.3px solid black;
 }
+
+.form>input,
+.form>textarea {
+    border: 0.3px solid #eb9034;
+}
+
+.form>*::placeholder {
+    font-family: 'Work Sans', sans-serif;
+    color: whitesmoke;
+}
+
+
+textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+
+
+
+.slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+}
+
+.slider .page {
+    scroll-snap-align: center;
+    height: 87vh;
+}
+
+.disableScrollbar::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
+.disableScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
 
 
 
@@ -197,12 +257,36 @@ input:focus ~footer>div, textarea:focus ~footer>div{
 
 
     .gmap_canvas {
-        height:500px;
+        height: 500px;
         width: 100%;
     }
 
 
+    .formGrid {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 4fr 1fr 2fr;
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "nn  "
+            "five";
+    }
+
+    .textContainer>span {
+        margin: 0;
+    }
+
+    .textContainer {
+        width: 90%;
+    }
 
 
+    .slider .page {
+        scroll-snap-align: center;
+    }
 
-}
+    }

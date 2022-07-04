@@ -1,29 +1,24 @@
 /**/
-import imagen from './img/a.jpg'
-import imagen2 from './img/b.jpg'
-import imagen3 from './img/c.jpg'
+import { About } from './About';
+import { Contact } from './Contact'
+import { MySkills } from './MySkills';
+import { MyWork } from './MyWork';
 
+import './page.css'
 /* */
 
 
 
 export const HomeScreen = () => {
-  return (
-    <>
-      <div className='section'></div>
-      <img alt='' src={imagen2}></img>
-      <div className='section'></div>
-      <img alt='' src={imagen}></img>
-      <div className='section'></div>
-      <img alt='' src={imagen3}></img>
-      <div className='section'></div>
-      <img alt='' src={imagen}></img>
-      <div className='section'></div>
-      <img alt='' src={imagen2}></img>
-      <div className='section'></div>
-      <img alt='' src={imagen3}></img>
-      <div className='section'></div>
+  
+  (document.getElementById("side-menu") || {}).checked = true;
 
-    </>
+  return (
+    <div className='slider disableScrollbar'>
+      <div><MySkills/></div>
+      <div><About/></div>
+      <div><MyWork/></div>
+      <div><Contact/></div>
+    </div>
   )
 }
