@@ -26,7 +26,7 @@
     grid-area: banner;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 0, 10, 0.3);
+    background-color: var(--pageBackground);
 }
 
 
@@ -50,22 +50,72 @@
     font-family: "Josefin Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     margin-left: 1em;
-    color: whitesmoke;
+    color: var(--fontColor);
     font-size: 3em;
     cursor: default;
-    text-shadow: 3px 3px 0px #e0872d;
+    text-shadow: 3px 3px 0px var(--backgroundEmphasis);
     align-self: flex-start;
+
+
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
+.textContainer>span:hover {
+    animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+
+
+.capital {
+    font-size: 1.5em;
+    color: var(--backgroundBase);
+    text-shadow: 3px 3px 0px var(--backgroundEmphasis),
+        -0.5px -0.5px 0px var(--backgroundEmphasis),
+        -0.5px 0.5px 0px var(--backgroundEmphasis),
+        0.5px -0.5px 0px var(--backgroundEmphasis);
+}
 
 .textContainer>p {
     font-family: "Work Sans", sans-serif;
     font-size: medium;
-    color: whitesmoke;
+    color: var(--fontColor);
 }
 
 .highBanner {
-    padding-top: 4em;
+    padding-top: 2em;
 }
 
 .chart {
@@ -75,7 +125,7 @@
 }
 
 .chart span {
-    color: whitesmoke;
+    color: var(--fontColor);
     font-size: 18px;
     margin-bottom: 7px;
     display: block;
@@ -84,7 +134,7 @@
 
 .chart footer,
 .form footer {
-    background-color: #373737;
+    background-color: var(--chartFooter);
     height: 4px;
     border-radius: 15px;
 }
@@ -96,10 +146,10 @@
     border-radius: 15px;
     background-image: linear-gradient(-225deg,
 
-            #fff800 0%,
-            #ff1361 33%,
-            #551599 66%,
-            #08fdd8 100%);
+            var(--gradient1) 0%,
+            var(--gradient2) 33%,
+            var(--gradient3) 66%,
+            var(--gradient4) 100%);
 }
 
 
@@ -108,8 +158,7 @@
 
 .mapouter {
     filter: invert() hue-rotate(227deg) contrast(1.3) brightness(0.7);
-    /* filter: contrast(1.1) blur(0.1px) hue-rotate(25deg) brightness(0.8); */
-    animation: fadeInAnimation ease 2s;
+
 }
 
 
@@ -145,7 +194,7 @@ textarea:focus~footer>div {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 4fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 4fr 20px 2fr;
     grid-template-areas:
         "one two"
         "three three"
@@ -168,12 +217,12 @@ textarea:focus~footer>div {
 }
 
 .form>* {
+    font-size: 1em;
     font-weight: 400;
     text-indent: 5px;
     border: none;
-    color: white;
-    /* background-color: #eb9034a2; */
-    background-color: rgba(10, 0, 10, 0.3);
+    color: var(--fontColor);
+    background-color: var(--pageBackground);
     width: calc(100% - 4px);
     height: 100%;
     border-radius: 3px;
@@ -181,12 +230,12 @@ textarea:focus~footer>div {
 
 .form>input,
 .form>textarea {
-    border: 0.3px solid #eb9034;
+    border: 0.3px solid var(--backgroundEmphasis);
 }
 
 .form>*::placeholder {
     font-family: 'Work Sans', sans-serif;
-    color: whitesmoke;
+    color: var(--fontColor);
 }
 
 
@@ -197,6 +246,43 @@ textarea {
 }
 
 
+.flatButton{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.flatButton::before{
+    content: attr(data-text);
+	width: 100%;
+    height: 100%;
+	position: absolute;
+	z-index: 2;
+    right: 0;
+    color: var(--backgroundEmphasis);
+    opacity: 0;
+	transition: .6s ease-in-out all;
+}
+
+.flatButton::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 80px);
+	border-bottom: 80px solid var(--backgroundBase);
+	border-right: 80px solid transparent;
+	transition: .4s ease-in-out all;
+}
+
+.flatButton:hover::after {
+	left: 0;
+}
+.flatButton:hover::before{
+    opacity: 1;
+}
 
 
 .slider {
@@ -230,6 +316,40 @@ html::-webkit-scrollbar {
 }
 
 
+
+
+.scrollDown {
+    position: absolute;
+    left: 15px;
+    bottom: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Work Sans', sans-serif;
+    color: var(--fontColor);
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+}
+
+
+
+.scrollDown span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes bounce-1 {
+    60% {
+        transform: translate(0px, -2em);
+    }
+}
 
 
 @media screen and (max-width: 900px) {
@@ -289,4 +409,9 @@ html::-webkit-scrollbar {
         scroll-snap-align: center;
     }
 
+    .scrollDown {
+        z-index: -1;
+        left: 0px;
+        bottom: 2px;
     }
+}

@@ -28,7 +28,7 @@ export const Contact = () => {
   return (
     <div className="page disableScrollbar">
       <div className="textContainer">
-      <span>Contact Me</span>
+        <span>Contact Me</span>
         <p>I believe in lifelong learning and continuous improvement. I'm really interested in full time jobs, hoping to connect with more lifelong learners and build the greatest team. </p>
         <p>Whether you have a question, just want to say hi or ask for my resume, I’ll try my best to get back to you!</p>
 
@@ -39,24 +39,25 @@ export const Contact = () => {
           target="_blank"
         >
           <div className="formGrid">
-            <div style={{'--area': 'one'}} className="form">
+            <div style={{ '--area': 'one' }} className="form">
               <input type="text" placeholder="Your name" name="name" required />
               <footer><div></div></footer>
             </div>
-            <div style={{'--area': 'two'}} className="form">
+            <div style={{ '--area': 'two' }} className="form">
               <input type="email" placeholder="Email" name="email" required />
               <footer><div></div></footer>
             </div>
-            <div style={{'--area': 'three'}} className="form">
+            <div style={{ '--area': 'three' }} className="form">
               <input type="Subject" placeholder="Subject" name="subject" required />
               <footer><div></div></footer>
             </div>
-            <div style={{'--area': 'four'}} className="form">
+            <div style={{ '--area': 'four' }} className="form">
               <textarea placeholder="Your message" name="message" required />
               <footer><div></div></footer>
             </div>
-            <div style={{'--area': 'five'}} className="form">
-              <button type="submit"> Send a message </button>
+            <div style={{ '--area': 'five' }} className="form">
+              <button type="submit" className="flatButton" data-text="Send a message">Send a message
+              </button>
             </div>
           </div>
         </form>
