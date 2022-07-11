@@ -26,7 +26,7 @@ export const AppRouter = () => {
 
 
     return (
-        <Router>
+        <Router basename="/portfolio">
             <div className='containerGrid'>
                 <div className="navBar"><NavBar /></div>
 

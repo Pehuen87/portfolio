@@ -1,0 +1,71 @@
+.galleryContainer{
+    padding: 15px;
+    height: 86vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+    
+    transition:  all 0.8s ease;
+}
+
+
+
+.galleryContainer>div:hover img{
+    
+    box-shadow: 2px 2px var(--fontColor);
+    filter: hue-rotate(20deg) contrast(1.3) brightness(0.7) grayscale(0.8);
+}
+
+.galleryContainer>div:active img{
+    box-shadow: 2px 2px var(--backgroundEmphasis);
+    filter:  contrast(1.3) brightness(0.7);
+}
+
+
+
+
+.galleryContainer>div {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.galleryContainer>div::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:60%;
+    left: 0;
+    text-align: center;
+    content:attr(data-text);
+    opacity: 0;
+    font-family: "Josefin Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: var(--fontColor);
+    font-size: 3em;
+    text-shadow: 3px 3px 0 var(--backgroundBase);
+    transition:  all 0.8s ease;
+}
+
+.galleryContainer>div:hover::after{
+    opacity: 1;
+}
+
+.galleryContainer>div:active::after{
+    text-shadow: 3px 3px 0 var(--backgroundEmphasis);
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .galleryContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

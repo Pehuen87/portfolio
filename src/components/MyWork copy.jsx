@@ -1,7 +1,7 @@
 
 import "./page.css"
 import React from 'react'
-import { WorkCarousel } from "./WorkCarousel";
+import { Gallery } from "./Gallery";
 
 export const MyWork = () => {
   
@@ -16,7 +16,7 @@ export const MyWork = () => {
       
       </div>
       <div className="banner">
-        <WorkCarousel />
+        <Gallery />
       </div>
     </div>
 
