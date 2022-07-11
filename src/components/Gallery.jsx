@@ -8,7 +8,7 @@ export const Gallery = () => {
 
     return (
         <div className='galleryContainer disableScrollbar'>
-            <div data-text="Work 1" >
+            <div id='hola' data-text="Work 1" onClick={(event)=>{console.log(event.target.id)}}>
                 <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
             </div><div data-text="Work 2">
                 <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
