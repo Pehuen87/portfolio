@@ -13,6 +13,7 @@ import { MySkills } from './MySkills'
 import { HomeScreen } from './HomeScreen'
 import { MyWork } from './MyWork'
 import { About } from './About'
+import { ThankYou } from './ThankYou'
 
 
 
@@ -37,6 +38,7 @@ export const AppRouter = () => {
                             <Route path='/my-skills' element={<MySkills />} />
                             <Route path='/my-work' element={<MyWork />} />
                             <Route path='/about' element={<About />} />
+                            <Route path='/thank-you' element={<ThankYou />} />
                             <Route path='/*' element={<HomeScreen />} />
                             {/* <Route path='/*' element={<h1>Error 404</h1>} /> */}
                         </Routes>
