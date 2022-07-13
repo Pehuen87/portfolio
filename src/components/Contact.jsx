@@ -19,7 +19,7 @@ export const Contact = () => {
   if (submitted) {
     return (
       <>
-        <h2>Thank you!</h2>
+        <span className="title">Thank you!</span>
         <div>We'll be in touch soon.</div>
       </>
     );
@@ -28,7 +28,7 @@ export const Contact = () => {
   return (
     <div className="page disableScrollbar">
       <div className="textContainer">
-        <span>Contact Me</span>
+        <span className="title">Contact Me</span>
         <p>I believe in lifelong learning and continuous improvement. I'm really interested in full time jobs, hoping to connect with more lifelong learners and build the greatest team. </p>
         <p>Whether you have a question, just want to say hi or ask for my resume, I’ll try my best to get back to you!</p>
 

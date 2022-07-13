@@ -8,7 +8,7 @@ import IMGA from './img/a.jpg'
 
 
 export const Gallery = () => {
-    const [divState, setDivState] = useState(0);
+    const [divState, setDivState] = useState(1);
 
 
 
@@ -16,22 +16,27 @@ export const Gallery = () => {
 
     return (
         <div className='galleryContainer disableScrollbar'>
-            <div data-text="Work 1" className={ (divState===1 ? 'floatingDiv' : '')} onClick={() => setDivState(1)}>
-            <img src={IMGA} alt="" />
-            </div><div data-text="Work 2"className={ (divState===2 ? 'floatingDiv' : '')} onClick={() => setDivState(2)}>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
-            </div><div data-text="Work 3"className={ (divState===3 ? 'floatingDiv' : '')} onClick={() => setDivState(3)}>
+            <div    data-text="Work 1" className={ (divState===1 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(1)}>
                 <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="" />
-            </div><div data-text="Work 4"className={ (divState===4 ? 'floatingDiv' : '')} onClick={() => setDivState(4)}>
+                <span></span>
+            </div><div data-text="Work 4"className={ (divState===4 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(4)}>
                 <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="" />
-            </div><div data-text="Work 5" className={ (divState===5 ? 'floatingDiv' : '')} onClick={() => setDivState(5)}>
+                <span></span>
+            </div><div data-text="Work 5" className={ (divState===5 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(5)}>
                 <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="" />
-            </div><div data-text="Work 6" className={ (divState===6 ? 'floatingDiv' : '')} onClick={() => setDivState(6)}>
+                <span></span>
+            </div><div data-text="Work 6" className={ (divState===6 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(6)}>
                 <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="" />
-            </div><div data-text="Work 7" className={ (divState===7 ? 'floatingDiv' : '')} onClick={() => setDivState(7)}>
+                <span></span>
+            </div><div data-text="Work 7" className={ (divState===7 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(7)}>
                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-            </div><div data-text="Work 8" className={ (divState===8 ? 'floatingDiv' : '')} onClick={() => setDivState(8)}>
+                <span></span>
+            </div><div data-text="Work 8" className={ (divState===8 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(8)}>
                 <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
+                <span></span>
+            </div><div data-text="Work 9" className={ (divState===9 ? 'bigOne' : 'smallOnes')} onClick={() => setDivState(9)}>
+                <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="" />
+                <span></span>
             </div>
         </div>
     )
