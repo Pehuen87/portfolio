@@ -18,7 +18,9 @@ export const About = () => {
         <div className="gmap_canvas">
           <iframe width="100%" height="500" title="iframe1" id="gmap_canvas" src={"https://maps.google.com/maps?q=buenos%20aires&t=&z=7&ie=UTF8&iwloc=&output=embed"} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
           </iframe>
+          <div className="floatingBanner">hola como andas</div>
         </div>
+        
       </div>
     </div>
 

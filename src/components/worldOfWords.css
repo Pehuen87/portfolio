@@ -111,20 +111,6 @@
 }
 
 .worldAnimationCenter{
-  font-size: medium;
-  width: 100px;
-  font-weight: bolder;
-  height: 40px;
-  background:transparent;
-  color:midnightblue;
-  position: absolute;
-  left: 400px;
-  text-align: center;
-  animation: none;
-  height: 60px;
-  font-size: large;
-  top: 110px;
-  color:whitesmoke;
-  text-shadow: 0.5px 0.5px black;
+  
   visibility: hidden;
 }

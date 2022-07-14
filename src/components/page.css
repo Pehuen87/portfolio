@@ -48,6 +48,9 @@
 }
 
 .lowBanner {
+    font-family: 'Limelight', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     display: flex;
     justify-content: center;
     animation: fadeInAnimation ease 3s;
@@ -140,6 +143,9 @@
 }
 
 .chart {
+    font-family: 'Limelight', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     margin: 1em 2em;
     width: 80%;
     max-width: 600px;
@@ -188,6 +194,16 @@
 .gmap_canvas {
     height: 100%;
     width: 100%;
+    position: relative;
+}
+
+.floatingBanner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 20%;
+    background-color: aqua;
 }
 
 
