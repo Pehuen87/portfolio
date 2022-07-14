@@ -35,7 +35,6 @@ body {
   width: 100vw;
   height: 95vh;
   gap: 5px;
-  text-align: center;
   grid-template-areas: "header     header"
     "menu-l     menu-l"
     "contain       contain"
@@ -44,6 +43,7 @@ body {
 
 .navBar {
   
+  text-align: center;
   font-family: "Josefin Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: var(--navbar);
   grid-area: header;
@@ -260,11 +260,12 @@ html::-webkit-scrollbar {
   .navlink,
   .nlActive {
     padding-left: 1em;
-    /* margin-left: 10px; */
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding-top: 1em; 
     display: none;
   }
+
+  
 
   .hamb {
     display: initial;
