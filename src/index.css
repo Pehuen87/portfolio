@@ -152,6 +152,8 @@ body {
 
 .logoSmall{
   display: none;
+
+  text-shadow: 3px 3px 0px var(--backgroundBase);
 }
 
 
@@ -278,6 +280,7 @@ html::-webkit-scrollbar {
 
   .logoSmall{
     display:initial;
+    
   }
 
   .logoNavBar {

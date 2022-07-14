@@ -74,7 +74,7 @@
     color: var(--fontColor);
     font-size: 3em;
     cursor: default;
-    /* text-shadow: 3px 3px 0px var(--backgroundEmphasis); */
+    text-shadow: 3px 3px 0px var(--backgroundBase);
     align-self: flex-start;
 
 
@@ -399,9 +399,7 @@ html::-webkit-scrollbar {
         padding-left: 10px;
     }
 
-    .fullPage .title{
-        display: none;
-    }
+
 
 
     .gmap_canvas {
