@@ -22,13 +22,13 @@
     }
 }
 
-.fullPage{
+.fullPage {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    align-content:center;
+    align-content: center;
     align-items: center;
     animation: fadeInAnimation ease-in 0.5s;
     animation-iteration-count: 1;
@@ -43,7 +43,7 @@
     background-color: var(--pageBackground);
 }
 
-.noOverflow{
+.noOverflow {
     overflow-y: hidden;
 }
 
@@ -60,13 +60,13 @@
     display: flex;
     flex-direction: column;
     grid-area: text;
-    margin-top: 1em;
+    margin: 2em;
 }
 
 .title {
     font-family: 'Limelight', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     margin-bottom: 0.5em;
     /* font-family: "Josefin Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-weight: bold;
@@ -74,7 +74,7 @@
     color: var(--fontColor);
     font-size: 2em;
     cursor: default;
-    text-shadow:  3px 3px 0px var(--backgroundBase);
+    text-shadow: 3px 3px 0px var(--backgroundBase);
     align-self: flex-start;
 
 
@@ -247,7 +247,7 @@ textarea:focus~footer>div {
     width: calc(100% - 4px);
     height: 100%;
     border-radius: 3px;
-    
+
 }
 
 .form>input,
@@ -268,44 +268,45 @@ textarea {
 }
 
 
-.flatButton{
+.flatButton {
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    font-weight:300;
+    font-weight: 300;
     font-family: 'Limelight', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
 }
 
-.flatButton::before{
+.flatButton::before {
     content: attr(data-text);
-	width: 100%;
+    width: 100%;
     height: 100%;
-	position: absolute;
-	z-index: 2;
+    position: absolute;
+    z-index: 2;
     right: 0;
     color: var(--backgroundEmphasis);
     opacity: 0;
-	transition: .6s ease-in-out all;
+    transition: .6s ease-in-out all;
 }
 
 .flatButton::after {
-	content: "";
-	width: 100%;
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: calc(-100% - 80px);
-	border-bottom: 80px solid var(--backgroundBase);
-	border-right: 80px solid transparent;
-	transition: .4s ease-in-out all;
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 80px);
+    border-bottom: 80px solid var(--backgroundBase);
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
 }
 
 .flatButton:hover::after {
-	left: 0;
+    left: 0;
 }
-.flatButton:hover::before{
+
+.flatButton:hover::before {
     opacity: 1;
 }
 
@@ -320,7 +321,8 @@ textarea {
 
 }
 
-.slider .page , .slider .fullPage{
+.slider .page,
+.slider .fullPage {
     scroll-snap-align: center;
     height: 87vh;
 }
@@ -399,7 +401,10 @@ html::-webkit-scrollbar {
         padding-left: 10px;
     }
 
+    .textContainer {
 
+        margin-top: 1em;
+    }
 
 
     .gmap_canvas {
