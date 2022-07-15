@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 
 import './gallery.css'
-import IMGA from './img/a.jpg'
 
 
 

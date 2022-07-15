@@ -1,11 +1,26 @@
 import "./page.css"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { LinkedInBadge } from "./LinkedInBadge";
+
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/54075530-01f7-11ed-bc36-e1ea9ccadd33";
 
 
 
 
 export const Contact = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+    script.async = true;
+    script.defer = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   (document.getElementById("side-menu") || {}).checked = false;
 
@@ -62,7 +77,12 @@ export const Contact = () => {
           </div>
         </form>
       </div>
-      <div className="banner"></div>
+      <div className="banner relativeBanner">
+        {/* <LinkedInBadge /> */}
+        <div className="codeBack"></div>
+
+
+      </div>
     </div>
   );
 };
