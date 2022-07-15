@@ -51,7 +51,7 @@ body {
   display: inline-flex;
   align-items: baseline;
   justify-content: space-evenly;
-  border: 2px solid var(--backgroundBase);
+  border: 3px solid var(--backgroundBase);
   border-radius: 10px;
   margin: 5px;
   font-size: 1.4em;
@@ -245,7 +245,7 @@ html::-webkit-scrollbar {
   width: 95%;
   background-color: var(--navbar);
   border-radius: 15px;
-  border: 2px solid var(--backgroundBase);
+  border: 3px solid var(--backgroundBase);
   box-shadow:  14px 0px 20px var(--navbar);
   overflow: hidden;
 }
@@ -326,7 +326,7 @@ html::-webkit-scrollbar {
   }
 
   input[type=checkbox]:checked~.logoNavBar {
-    border-bottom: 2px solid var(--hoverNav);
+    border-bottom: 3px solid var(--backgroundBase);
   }
   .logoBorder::before {
     display: none;
