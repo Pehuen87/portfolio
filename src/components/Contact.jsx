@@ -11,7 +11,7 @@ export const Contact = () => {
   useEffect(() => {
     const script = document.createElement('script');
 
-    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+    script.src = "/js/linkedin/profile.js";
     script.async = true;
     script.defer = true;
 
@@ -78,7 +78,7 @@ export const Contact = () => {
         </form>
       </div>
       <div className="banner relativeBanner">
-        {/* <LinkedInBadge /> */}
+        <LinkedInBadge />
         <div className="codeBack"></div>
 
 
