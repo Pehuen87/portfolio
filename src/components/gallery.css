@@ -75,6 +75,9 @@
     text-shadow: 3px 3px 0 var(--backgroundEmphasis);
 }
 
+.smallOnes>.arrow{
+    display: none;
+}
 
 
 .bigOne {
@@ -84,6 +87,34 @@
     display: flex;
     align-items: center;
 }
+.bigOne>.arrow{
+    position: absolute;
+    top: calc(50% - 25px);
+    width: 30px;
+    height: 50px;
+    background-color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s linear;
+    border-radius: 2px;
+}
+.bigOne>.backward{
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.bigOne>.forward{
+    right: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bigOne>.arrow:hover{
+    opacity: 0.8;
+}
+
+
 
 .bigOne>span {
     position: absolute;

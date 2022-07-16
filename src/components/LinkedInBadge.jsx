@@ -9,7 +9,7 @@ export const LinkedInBadge = () => {
       <div className='linkedIn'>
 
 
-        <div className="profile-badge profile-badge--width-300 profile-badge--dark" dir="ltr">
+        <div className="profile-badge profile-badge--dark" dir="ltr">
           <div className="profile-badge__header profile-badge__header--dark">
             <span className="sr-only">LinkedIn</span>
 
@@ -50,7 +50,7 @@ export const LinkedInBadge = () => {
               <a href="https://www.linkedin.com/school/universidad-tecnologica-nacional/?trk=public-profile-badge-profile-badge_school-name" className="profile-badge__content-profile-company-school-info-link profile-badge__content-profile-company-school-info-link--dark" data-tracking-control-name="public-profile-badge-profile-badge_school-name" data-tracking-will-navigate="true">Universidad Tecnológica Nacional</a>
             </h4>
           </div>
-          <a className="profile-badge__cta-btn profile-badge__cta-btn--dark" href="https://ar.linkedin.com/in/pehuen-assalone/en?trk=public-profile-badge-profile-badge-view-profile-cta" target="_blank" data-tracking-control-name="public-profile-badge-profile-badge-view-profile-cta" data-tracking-will-navigate="">
+          <a className="profile-badge__cta-btn profile-badge__cta-btn--dark" href="https://ar.linkedin.com/in/pehuen-assalone/en?trk=public-profile-badge-profile-badge-view-profile-cta" target="_blank"  rel="noreferrer" data-tracking-control-name="public-profile-badge-profile-badge-view-profile-cta" data-tracking-will-navigate="">
             View profile
           </a>
         </div>
