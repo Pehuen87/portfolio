@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { LazyLoadImage} from 'react-lazy-load-image-component';
 import './gallery.css'
 
 
@@ -57,7 +58,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work1Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work1Imgs[(divState === 1 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work1Imgs[(divState === 1 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
             {/* START WORK 2 */}
@@ -70,7 +71,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work2Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work2Imgs[(divState === 2 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work2Imgs[(divState === 2 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
             {/* START WORK 3 */}
@@ -83,7 +84,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work3Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work3Imgs[(divState === 3 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work3Imgs[(divState === 3 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
             {/* START WORK 4 */}
@@ -95,7 +96,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work4Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work4Imgs[(divState === 4 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work4Imgs[(divState === 4 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
             {/* START WORK 5 */}
@@ -107,7 +108,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work5Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work5Imgs[(divState === 5 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work5Imgs[(divState === 5 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
             {/* START WORK 6 */}
@@ -119,7 +120,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work6Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work6Imgs[(divState === 6 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work6Imgs[(divState === 6 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
             {/* START WORK 7 */}
@@ -131,7 +132,7 @@ export const Gallery = () => {
                 <div className=' arrow forward'
                     onClick={() => nextImg(work7Imgs.length)}>&#62;&#62;
                 </div>
-                <img src={work7Imgs[(divState === 7 ? imgDisplayState : 0)]} alt="" />
+                <LazyLoadImage src={work7Imgs[(divState === 7 ? imgDisplayState : 0)]} alt="" />
                 <span></span>
             </div>
         </div>
