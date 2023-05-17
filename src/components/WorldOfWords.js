@@ -1,31 +1,34 @@
-import './worldOfWords.css'
 import React from 'react';
+import './worldOfWords.css';
 
+const WorldOfWords = () => {
+  const technologies = [
+    'CSS',
+    'React',
+    'JavaScript',
+    'HTML',
+    'C#',
+    'SASS',
+    'MongoDB',
+    'TypeScript',
+    'SQL',
+    'C',
+    'LESS',
+    'Node.js',
+    'Bootstrap',
+    'Git',
+    '.NET'
+  ];
 
-export const WorldOfWords = () => {
   return (
-      <div className='world'>
-        <span className='worldAnimationCenter'>Pehuén Assalone</span>
+    <div className="world">
+      <span className="worldAnimationCenter">Pehuén Assalone</span>
 
-        <div>CSS</div>
-        <div>React</div>
-        <div>JavaScript</div>
-        <div>HTML</div>
-        <div>C#</div>
-
-        <div>SASS</div>
-        <div>Mongo DB</div>
-        <div>TypeScript</div>
-        <div>SQL</div>
-        <div>C</div>
-
-        <div>LESS</div>
-        <div>Node.Js</div>
-        <div>BootStrap</div>
-        <div>Git</div>
-        <div>.Net</div>
-      </div>
-  )
-}
+      {technologies.map((technology, index) => (
+        <div key={index}>{technology}</div>
+      ))}
+    </div>
+  );
+};
 
 export default WorldOfWords;

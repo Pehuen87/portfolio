@@ -34,7 +34,7 @@ export const LinkedInBadge = () => {
           </div>
           <div className="profile-badge__content">
 
-            <img className="artdeco-entity-image artdeco-entity-image--circle-4  profile-badge__content-profile-image" src="https://media-exp1.licdn.com/dms/image/C4D03AQFOJQOd_yAJAw/profile-displayphoto-shrink_200_200/0/1656337956782?e=1663200000&amp;v=beta&amp;t=Txztr03CkGYdCrWASKgCezbHNCy0jHcv4xg9u95SdhM" alt="Pehuén Assalone" />
+            <img className="artdeco-entity-image artdeco-entity-image--circle-4  profile-badge__content-profile-image" src="https://media.licdn.com/dms/image/D4D35AQFHJxWfi1WZxQ/profile-framedphoto-shrink_200_200/0/1684184469252?e=1684890000&v=beta&t=8sH5aDy_9-cTlRD_UYO7AoiAh617XixLdzblO-G2tXc" alt="Pehuén Assalone" />
 
             <h3 className="profile-badge__content-profile-name" itemprop="name">
               <a className="profile-badge__content-profile-name-link profile-badge__content-profile-name-link--dark" href="https://ar.linkedin.com/in/pehuen-assalone/en?trk=public-profile-badge-profile-badge-profile-name" data-tracking-control-name="public-profile-badge-profile-badge-profile-name" data-tracking-will-navigate="">
@@ -50,7 +50,7 @@ export const LinkedInBadge = () => {
               <a href="https://www.linkedin.com/school/universidad-tecnologica-nacional/?trk=public-profile-badge-profile-badge_school-name" className="profile-badge__content-profile-company-school-info-link profile-badge__content-profile-company-school-info-link--dark" data-tracking-control-name="public-profile-badge-profile-badge_school-name" data-tracking-will-navigate="true">Universidad Tecnológica Nacional</a>
             </h4>
           </div>
-          <a className="profile-badge__cta-btn profile-badge__cta-btn--dark" href="https://ar.linkedin.com/in/pehuen-assalone/en?trk=public-profile-badge-profile-badge-view-profile-cta" target="_blank"  rel="noreferrer" data-tracking-control-name="public-profile-badge-profile-badge-view-profile-cta" data-tracking-will-navigate="">
+          <a className="profile-badge__cta-btn profile-badge__cta-btn--dark" href="https://ar.linkedin.com/in/pehuen-assalone/en?trk=public-profile-badge-profile-badge-view-profile-cta" target="_blank" rel="noreferrer" data-tracking-control-name="public-profile-badge-profile-badge-view-profile-cta" data-tracking-will-navigate="">
             View profile
           </a>
         </div>
