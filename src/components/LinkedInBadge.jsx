@@ -1,5 +1,6 @@
 import React from 'react';
-import './linkedInBadge.css'
+import './linkedInBadge.css';
+import profile from './img/profile.jpg';
 
 export const LinkedInBadge = () => {
 
@@ -13,9 +14,9 @@ export const LinkedInBadge = () => {
           <div className="profile-badge__header profile-badge__header--dark">
             <span className="sr-only">LinkedIn</span>
 
-            <icon className="profile-badge__header-logo-icon profile-badge__header-logo-icon--dark" aria-hidden="true">
+            <div className="profile-badge__header-logo-icon profile-badge__header-logo-icon--dark" aria-hidden="true">
               <svg focusable="false" preserveAspectRatio="xMinYMin meet" version="1.1" viewBox="0 0 84 21" xmlns="http://www.w3.org/2000/svg">
-                <g className="inbug" fill="none" fill-rule="evenodd">
+                <g className="inbug" fill="none" fillRule="evenodd">
                   <path className="bug-text-color" transform="translate(63)" d="M19.479,0 L1.583,0 C0.727,0 0,0.677 0,1.511 L0,19.488 C0,20.323 0.477,21 1.333,21 L19.229,21 C20.086,21 21,20.323 21,19.488 L21,1.511 C21,0.677 20.336,0 19.479,0" />
                   <path className="background" d="m82.479 0h-17.896c-0.856 0-1.583 0.677-1.583 1.511v17.977c0 0.835 0.477 1.512 1.333 1.512h17.896c0.857 0 1.771-0.677 1.771-1.512v-17.977c0-0.834-0.664-1.511-1.521-1.511zm-11.479 8h2.827v1.441h0.031c0.431-0.777 1.704-1.566 3.278-1.566 3.021 0 3.864 1.604 3.864 4.575v5.55h-3v-5.003c0-1.33-0.531-2.497-1.773-2.497-1.508 0-2.227 1.021-2.227 2.697v4.803h-3v-10zm-5 10h3v-10h-3v10zm3.375-13.5c0 1.036-0.839 1.875-1.875 1.875s-1.875-0.839-1.875-1.875 0.839-1.875 1.875-1.875 1.875 0.839 1.875 1.875z" fill="currentColor" />
                 </g>
@@ -29,21 +30,21 @@ export const LinkedInBadge = () => {
                 </g>
               </svg>
 
-            </icon>
+            </div>
 
           </div>
           <div className="profile-badge__content">
 
-            <img className="artdeco-entity-image artdeco-entity-image--circle-4  profile-badge__content-profile-image" src="https://media.licdn.com/dms/image/D4D35AQFHJxWfi1WZxQ/profile-framedphoto-shrink_200_200/0/1684184469252?e=1684890000&v=beta&t=8sH5aDy_9-cTlRD_UYO7AoiAh617XixLdzblO-G2tXc" alt="Pehuén Assalone" />
+            <img className="artdeco-entity-image artdeco-entity-image--circle-4  profile-badge__content-profile-image" src={profile} alt="Pehuén Assalone" />
 
-            <h3 className="profile-badge__content-profile-name" itemprop="name">
+            <h3 className="profile-badge__content-profile-name" itemProp="name">
               <a className="profile-badge__content-profile-name-link profile-badge__content-profile-name-link--dark" href="https://ar.linkedin.com/in/pehuen-assalone/en?trk=public-profile-badge-profile-badge-profile-name" data-tracking-control-name="public-profile-badge-profile-badge-profile-name" data-tracking-will-navigate="">
                 Pehuén Assalone
               </a>
             </h3>
 
             <h4 className="profile-badge__content-profile-headline">
-              Web Developer
+              Full-Stack Developer
             </h4>
 
             <h4 className="profile-badge__content-profile-company-school-info">

@@ -9,17 +9,7 @@ const FORM_ENDPOINT = "https://public.herotofu.com/v1/54075530-01f7-11ed-bc36-e1
 
 export const Contact = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = "/js/linkedin/profile.js";
-    script.async = true;
-    script.defer = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+   
   }, []);
 
   (document.getElementById("side-menu") || {}).checked = false;

@@ -12,9 +12,9 @@ const WorldOfWords = () => {
     'MongoDB',
     'TypeScript',
     'SQL',
-    'C',
-    'LESS',
-    'Node.js',
+    'Node',
+    'Redux',
+    'Express',
     'Bootstrap',
     'Git',
     '.NET'
